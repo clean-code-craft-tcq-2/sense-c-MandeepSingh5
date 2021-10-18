@@ -32,6 +32,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         else if (numberset[i] < s.min)
             s.min = numberset[i];
     }
+    return s;
 }
 
 int emailAlertCallCount = 0;

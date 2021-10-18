@@ -23,14 +23,12 @@ TEST_CASE("average is NaN for empty array") {
     
     //Design the REQUIRE statement here.
     #ifdef NAN
-    float a = computedStats.average;
-    bool b = isnan(a)?true:false;
+    REQUIRE(isnan(computedStats.average)?true:false);
     #endif
     #ifdef INFINITY
-    float a = computedStats.average;
-    bool b = isinf(a)?true:false;
+    REQUIRE(isinf(computedStats.average)?true:false);
     #endif
-    REQUIRE(b);
+    
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
 

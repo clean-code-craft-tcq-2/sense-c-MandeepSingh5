@@ -23,6 +23,7 @@ TEST_CASE("average is NaN for empty array") {
     
     //Design the REQUIRE statement here.
     #ifdef NAN
+    bool b= false;
     if(isnan(computedStats.average))
     {
             bool b=true;

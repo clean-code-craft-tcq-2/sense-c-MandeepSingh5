@@ -20,16 +20,13 @@ TEST_CASE("average is NaN for empty array") {
     Stats computedStats = compute_statistics(0, 0);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
+    int setlength = sizeof(numberset) / sizeof(numberset[0]);
+    struct Stats computedStats = compute_statistics(numberset, setlength);
     
-    //Design the REQUIRE statement here.
-    #ifdef NAN
-    bool b= false;
-    if(isnan(computedStats.average))
-    {
-            bool b=true;
-    }
-            
-    REQUIRE(b);
+    //Design the REQUIRE statement here.        
+    REQUIRE(isnan(computedStats.average)==0);
+    REQUIRE(isnan(computedStats.max)==0);
+    REQUIRE(isnan(computedStats.min)==0);
     #endif
     
     

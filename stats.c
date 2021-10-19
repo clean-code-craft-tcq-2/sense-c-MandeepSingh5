@@ -2,9 +2,8 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
-    double sum = 0.0;
-
-    for (int i = 0; i < setlength - 1; i++)
+    float sum = 0.0;
+    for (int i = 0; i < setlength; i++)
     {
         sum += numberset[i];
     }

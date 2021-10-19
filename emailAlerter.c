@@ -3,14 +3,14 @@
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
-  /* check whether max value is more than threshold
+  /* check whether max value is more than threshold*/
   /*raises alerts when max is greater than threshold*/
-  const int number_of_alerts = 2
+  int number_of_alerts = 2;
   if(computedStats.max > maxThreshold)
   {
     for(int id = 0; id<number_of_alerts;id++)
     {
-      (*alerters[id])(); /* calling email alert or led alert function based on id ( 0 ==> email alert ,  1==> led alert)
+      (*alerters[id])(); /* calling email alert or led alert function based on id ( 0 ==> email alert ,  1==> led alert)*/
     }
   }
   else

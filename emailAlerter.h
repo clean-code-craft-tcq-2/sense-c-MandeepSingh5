@@ -1,2 +1,2 @@
-void emailAlertCallCount(void);
-void ledAlertCallCount(void);
+void emailAlerter(void);
+void ledAlerter(void);

@@ -19,11 +19,11 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
   }
 }
 
-void emailAlertCallCount(void)
+void emailAlerter(void)
 {
   ++emailAlertCallCount; /* increment the count for email alert */
 }
-void ledAlertCallCount(void)
+void ledAlerter(void)
 {
   ++ledAlertCallCount;  /* increment the count for led alert */
 }
